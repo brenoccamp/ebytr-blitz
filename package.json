@@ -1,0 +1,19 @@
+{
+  "name": "ebytr-blitz-career",
+  "version": "1.0.0",
+  "description": "Este projeto foi desenvolvido por https://github.com/brenoccamp para simular um desafio técnico real life.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brenoccamp/ebytr-blitz.git"
+  },
+  "author": "Breno da Cunha Campanha - https://github.com/brenoccamp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brenoccamp/ebytr-blitz/issues"
+  },
+  "homepage": "https://github.com/brenoccamp/ebytr-blitz#readme"
+}
