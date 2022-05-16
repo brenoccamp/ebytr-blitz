@@ -4,9 +4,9 @@ module.exports = {
     await queryInterface.createTable('todos', {
       id: {
         allowNull: false,
-        autoIncrement: false,
+        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       subject: {
         type: Sequelize.STRING

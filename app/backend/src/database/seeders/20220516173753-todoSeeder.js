@@ -1,7 +1,7 @@
 module.exports = {
   up: async (queryInterface) => {
     await queryInterface.bulkInsert(
-      'users',
+      'todos',
       [
         {
           subject: 'Task 1 to test user1',
@@ -63,6 +63,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.bulkDelete('users', null, {});
+    await queryInterface.bulkDelete('todos', null, {});
   },
 };

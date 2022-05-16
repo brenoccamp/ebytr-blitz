@@ -14,7 +14,7 @@ class UserHistory extends Model {
 }
 
 UserHistory.init({
-  id: { type: DataTypes.STRING, primaryKey: true, autoIncrement: true },
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   userId: { type: DataTypes.STRING, allowNull: false },
   todoId: { type: DataTypes.STRING, allowNull: false },
   createdAt: { type: DataTypes.STRING, allowNull: false },
