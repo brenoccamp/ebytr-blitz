@@ -1,1 +1,7 @@
-node_modules
+# Arquivo criado com base no arquivo .gitingore do projecto Trybe-Futebol-Clube da Trybe.
+# File created based on .gitignore from project Trybe-Futebol-Clube which pertences on Trybe institution
+node_modules.tar.gz
+/build
+/node_modules
+.env
+*.http
