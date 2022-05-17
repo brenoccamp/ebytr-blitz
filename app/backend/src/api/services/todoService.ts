@@ -30,6 +30,12 @@ export default class TodoService implements ITodoService {
     return todosByStatus;
   }
 
+  private async getTodoById(id: number): Promise<ITodo> {
+    const todoFound = await this._TodoModel.findByPk(id);
+
+    return todoFound as ITodo;
+  }
+
   public async insertNewTodo(newTodo: ITodo): Promise<ITodo> {
     const createdTodo = await this._TodoModel.create({
       subject: newTodo.subject,
@@ -39,5 +45,34 @@ export default class TodoService implements ITodoService {
     });
 
     return createdTodo;
+  }
+
+  public async updateTodo(
+    id: number,
+    propertyToEdit: string,
+    newPropertyInfo: string,
+  ): Promise<boolean | void> {
+    const todoFound = await this.getTodoById(id);
+    if (!todoFound) return todoFound;
+
+    await this._TodoModel.update({ [propertyToEdit]: newPropertyInfo }, {
+      where: {
+        id,
+      },
+    });
+
+    return true;
+  }
+
+  public async deleteTodo(id: number): Promise<boolean | void> {
+    const todoFound = await this.getTodoById(id);
+
+    if (!todoFound) return todoFound;
+
+    await this._TodoModel.destroy({
+      where: { id },
+    });
+
+    return true;
   }
 }
