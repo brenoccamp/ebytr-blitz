@@ -4,25 +4,25 @@ import db from '.';
 class UserHistory extends Model {
   declare id: number;
 
-  declare userId: string;
+  declare userId: number;
 
-  declare todoId: string;
+  declare todoId: number;
 
-  declare createdAt: string;
+  declare createdAt: Date;
 
-  declare modification: string;
+  declare activity: string;
 }
 
 UserHistory.init({
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  userId: { type: DataTypes.STRING, allowNull: false },
-  todoId: { type: DataTypes.STRING, allowNull: false },
-  createdAt: { type: DataTypes.STRING, allowNull: false },
-  modification: { type: DataTypes.STRING, allowNull: false },
+  userId: { type: DataTypes.INTEGER, allowNull: false },
+  todoId: { type: DataTypes.INTEGER, allowNull: false },
+  activity: { type: DataTypes.STRING, allowNull: false },
+  createdAt: { type: DataTypes.DATE, allowNull: false },
 }, {
   sequelize: db,
   modelName: 'UserHistory',
-  // timestamps: true,
+  timestamps: true,
   underscored: true,
   tableName: 'user_history',
 });

@@ -7,55 +7,55 @@ module.exports = {
           subject: 'Task 1 to test user1',
           description: 'Task pending added for test seeders and other behaviors',
           status: 'pending',
-          userId: 1
+          user_id: 1
         },
         {
           subject: 'Task 2 to test user1',
           description: 'Task in progress added for test seeders and other behaviors',
           status: 'in progress',
-          userId: 1
+          user_id: 1
         },
         {
           subject: 'Task 3 to test user1',
           description: 'Task done added for test seeders and other behaviors',
           status: 'done',
-          userId: 1
+          user_id: 1
         },
         {
           subject: 'Task 1 to test user2',
           description: 'Task pending added for test seeders and other behaviors',
           status: 'pending',
-          userId: 2
+          user_id: 2
         },
         {
           subject: 'Task 2 to test user2',
           description: 'Task in progress added for test seeders and other behaviors',
           status: 'in progress',
-          userId: 2
+          user_id: 2
         },
         {
           subject: 'Task 3 to test user2',
           description: 'Task done added for test seeders and other behaviors',
           status: 'done',
-          userId: 2
+          user_id: 2
         },
         {
           subject: 'Task 1 to test user3',
           description: 'Task pending added for test seeders and other behaviors',
           status: 'pending',
-          userId: 3
+          user_id: 3
         },
         {
           subject: 'Task 2 to test user3',
           description: 'Task in progress added for test seeders and other behaviors',
           status: 'in progress',
-          userId: 3
+          user_id: 3
         },
         {
           subject: 'Task 3 to test user3',
           description: 'Task done added for test seeders and other behaviors',
           status: 'done',
-          userId: 3
+          user_id: 3
         },
       ],
       {},

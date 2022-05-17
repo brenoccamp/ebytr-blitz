@@ -10,7 +10,11 @@ class Todo extends Model {
 
   declare status: string;
 
-  declare userId: string;
+  declare userId: number;
+
+  declare createdAt: Date;
+
+  declare updatedAt: Date;
 }
 
 Todo.init({
@@ -18,11 +22,13 @@ Todo.init({
   subject: { type: DataTypes.STRING, allowNull: true },
   description: { type: DataTypes.STRING, allowNull: false },
   status: { type: DataTypes.STRING, allowNull: false },
-  userId: { type: DataTypes.STRING, allowNull: false },
+  userId: { type: DataTypes.INTEGER, allowNull: false },
+  createdAt: DataTypes.TIME,
+  updatedAt: DataTypes.DATE,
 }, {
   sequelize: db,
   modelName: 'Todo',
-  // timestamps: true,
+  timestamps: true,
   underscored: true,
   tableName: 'todos',
 });
