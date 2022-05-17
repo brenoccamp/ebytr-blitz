@@ -1,5 +1,6 @@
 import { DataTypes, Model } from 'sequelize';
 import db from '.';
+import User from './userModel';
 
 class Todo extends Model {
   declare id: number;
@@ -32,5 +33,7 @@ Todo.init({
   underscored: true,
   tableName: 'todos',
 });
+
+Todo.belongsTo(User, { foreignKey: 'userId', as: 'user' });
 
 export default Todo;
