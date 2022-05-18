@@ -31,4 +31,6 @@ class App {
   }
 }
 
-export default App;
+export { App };
+
+export const { app } = new App();
