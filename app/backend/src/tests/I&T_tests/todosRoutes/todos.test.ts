@@ -1,12 +1,8 @@
 import * as chai from 'chai';
 import * as sinon from 'sinon';
 import chaiHttp = require('chai-http');
-// import { Request, Response, NextFunction } from 'express'
 import TodoModel from '../../../database/models/todoModel';
 import { Response } from 'superagent';
-// import TodoController from '../../../api/controllers/todoController';
-// import TodoService from '../../../api/services/todoService';
-import { ITodo } from '../../../interfaces/todoInterfaces';
 import {
   allTodos,
   toodsSortedBySubject,
@@ -25,9 +21,6 @@ import { app } from '../../../app';
 chai.use(chaiHttp);
 
 const { expect } = chai;
-
-// const todoService = new TodoService();
-// const todoController = new TodoController(todoService);
 
 describe('(I&T Tests) TodoController ~ 1-Testing routes ', () => {
   let chaiHttpResponse: Response;
