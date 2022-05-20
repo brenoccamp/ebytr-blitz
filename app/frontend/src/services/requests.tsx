@@ -15,3 +15,13 @@ export const insertNewTodo = async (newTask: INewTask) => {
 
   await axios(reqInfo);
 };
+
+export const deleteById = async (id: number) => {
+  const reqInfo = {
+    url: `${API_BASE_URL}/todos/${id}`,
+    method: 'DELETE',
+    headers: { Accept: 'application/json', 'Content-type': 'application/json;charset=UTF-8' },
+  };
+
+  await axios(reqInfo);
+};
