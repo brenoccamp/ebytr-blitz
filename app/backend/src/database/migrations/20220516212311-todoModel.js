@@ -23,7 +23,7 @@ module.exports = {
       userId: {
         type: Sequelize.STRING,
         field: 'user_id',
-        allowNull: false,
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,
