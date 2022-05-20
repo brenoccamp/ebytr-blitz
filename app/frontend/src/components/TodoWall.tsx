@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Trash, Pen } from 'phosphor-react';
-import { getAllTodos } from '../services/requests';
-import { IAppContext } from '../interfaces/ApplicationInterfaces';
+import { TrashSimple, Pen } from 'phosphor-react';
+import { getAllTodos, deleteById } from '../services/requests';
+import { IAppContext, IOnChange } from '../interfaces/ApplicationInterfaces';
 import ApplicationContext from '../context/ApplicationContext';
 
 export default function TodoTable() {
@@ -11,6 +11,7 @@ export default function TodoTable() {
     loading,
     setLoading,
     forceUpdate,
+    setForceUpdate,
   } = React.useContext(ApplicationContext) as IAppContext;
 
   const getTodos = async () => {
@@ -19,6 +20,13 @@ export default function TodoTable() {
       setTodos(data);
       setLoading(false);
     }
+  };
+
+  const deleteTodo = async (target: IOnChange) => {
+    const id = Number(target.id);
+
+    await deleteById(id);
+    setForceUpdate(!forceUpdate);
   };
 
   React.useEffect(() => {
@@ -62,17 +70,27 @@ export default function TodoTable() {
             </li>
             <li>{todo.status}</li>
           </ul>
-          <Trash
+          <button
+            type="button"
             id={`${todo.id}`}
-            size={15}
-            color="red"
-            onClick={(e) => console.log(e.target)}
-          />
-          <Pen
-            id={`${todo.id}`}
-            size={15}
-            color="red"
-          />
+            onClick={(e) => deleteTodo(e.target)}
+          >
+            <TrashSimple
+              id={`${todo.id}`}
+              size={15}
+              color="red"
+              // onClick={(e: React.MouseEvent<Element>) => deleteTodo(e)}
+            />
+          </button>
+          <button
+            type="button"
+          >
+            <Pen
+              id={`${todo.id}`}
+              size={15}
+              color="red"
+            />
+          </button>
         </div>
       ))}
     </main>

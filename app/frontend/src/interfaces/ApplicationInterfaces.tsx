@@ -14,6 +14,10 @@ export interface INewTask {
   [key: string]: string;
 }
 
+export interface IOnChange extends EventTarget {
+  id?: string;
+}
+
 export interface IAppContext {
   todos: ITodo[];
   setTodos(todos: ITodo[]): void;

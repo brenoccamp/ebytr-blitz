@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import Header from './components/Header';
-import TodoTable from './components/TodoTable';
+import TodoWall from './components/TodoWall';
 import NewTodoForms from './components/NewTodoForms';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div>
       <Header />
       <NewTodoForms />
-      <TodoTable />
+      <TodoWall />
     </div>
   );
 }
