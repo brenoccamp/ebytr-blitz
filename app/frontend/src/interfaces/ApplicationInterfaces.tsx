@@ -1,31 +1,30 @@
 import * as React from 'react';
 
 export interface ITodo {
-  id?: number;
+  id: number;
   subject: string;
   description: string;
   status: string;
-  userId?: number;
-  createdAt?: Date;
-  updatedAt?: Date;
+  userId: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface INewTask {
+  [key: string]: string;
 }
 
 export interface IAppContext {
   todos: ITodo[];
   setTodos(todos: ITodo[]): void;
+  loading: boolean;
+  setLoading(loading: boolean): void;
+  newTodo: INewTask;
+  setNewTodo(newTodo: INewTask): void;
+  forceUpdate: boolean;
+  setForceUpdate(forceUpdate: boolean): void;
 }
 
 export interface IProps {
   children?: React.ReactNode;
 }
-
-// export interface IAppContext {
-//   todos: ITodo[];
-//   // setTodos: (todos: ITodo[]) => Promise<void>;
-//   getAllTodos: () => Promise<ITodo[]>;
-//   getSortedTodos: (valueToSort: string) => Promise<ITodo[]>;
-//   getTodosByStatus: (status: string) => Promise<ITodo[]>;
-//   insertNewTodo: (newTodo: ITodo) => Promise<ITodo>;
-//   updateTodo: (id:number, propertyToEdit:string, newPropertyInfo:string) => Promise<boolean | void>;
-//   deleteTodo: (id: number) => Promise<boolean | void>;
-// }
