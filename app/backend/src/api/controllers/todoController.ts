@@ -61,7 +61,7 @@ export default class TodoController implements ITodoController {
     try {
       const newTodo: ITodo = req.body;
 
-      if (!newTodo.subject || !newTodo.description || !newTodo.status || !newTodo.userId) {
+      if (!newTodo.subject || !newTodo.description || !newTodo.status) {
         return res.status(400)
           .json({
             message: `Body must have followed properties: "subject",

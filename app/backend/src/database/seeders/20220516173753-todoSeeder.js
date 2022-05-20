@@ -4,58 +4,58 @@ module.exports = {
       'todos',
       [
         {
-          subject: 'Task 1 to test user1',
-          description: 'Task pending added for test seeders and other behaviors',
+          subject: 'Assunto 1',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'pending',
-          user_id: 1
+          // user_id: 1
         },
         {
-          subject: 'Task 2 to test user1',
-          description: 'Task in progress added for test seeders and other behaviors',
+          subject: 'Assunto 2',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'in progress',
-          user_id: 1
+          // user_id: 1
         },
         {
-          subject: 'Task 3 to test user1',
-          description: 'Task done added for test seeders and other behaviors',
+          subject: 'Assunto 3',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'done',
-          user_id: 1
+          // user_id: 1
         },
         {
-          subject: 'Task 1 to test user2',
-          description: 'Task pending added for test seeders and other behaviors',
+          subject: 'Assunto 4',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'pending',
-          user_id: 2
+          // user_id: 2
         },
         {
-          subject: 'Task 2 to test user2',
-          description: 'Task in progress added for test seeders and other behaviors',
+          subject: 'Assunto 5',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'in progress',
-          user_id: 2
+          // user_id: 2
         },
         {
-          subject: 'Task 3 to test user2',
-          description: 'Task done added for test seeders and other behaviors',
+          subject: 'Assunto 6',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'done',
-          user_id: 2
+          // user_id: 2
         },
         {
-          subject: 'Task 1 to test user3',
-          description: 'Task pending added for test seeders and other behaviors',
+          subject: 'Assunto 7',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'pending',
-          user_id: 3
+          // user_id: 3
         },
         {
-          subject: 'Task 2 to test user3',
-          description: 'Task in progress added for test seeders and other behaviors',
+          subject: 'Assunto 8',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'in progress',
-          user_id: 3
+          // user_id: 3
         },
         {
-          subject: 'Task 3 to test user3',
-          description: 'Task done added for test seeders and other behaviors',
+          subject: 'Assunto 9',
+          description: 'Descrição YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem YpsumLorem ',
           status: 'done',
-          user_id: 3
+          // user_id: 3
         },
       ],
       {},

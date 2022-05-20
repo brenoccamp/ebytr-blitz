@@ -23,7 +23,7 @@ Todo.init({
   subject: { type: DataTypes.STRING, allowNull: true },
   description: { type: DataTypes.STRING, allowNull: false },
   status: { type: DataTypes.STRING, allowNull: false },
-  userId: { type: DataTypes.INTEGER, allowNull: false },
+  userId: { type: DataTypes.INTEGER, allowNull: true, defaultValue: 0 },
   createdAt: DataTypes.TIME,
   updatedAt: DataTypes.DATE,
 }, {
